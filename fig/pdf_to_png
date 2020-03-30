@@ -1,0 +1,3 @@
+for f in $(ls *.pdf); do
+  pdftoppm $f $(echo $f | cut -d. -f1 | cut -d- -f2-) -png;
+done

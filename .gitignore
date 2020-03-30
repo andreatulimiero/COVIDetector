@@ -1,0 +1,14 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.swp
+*.auxlock
+overview.pdf
+ml/data/*
+ml/output
+__pycache__/
+env/
+*.sqlite3
+.env
