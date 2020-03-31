@@ -2,7 +2,7 @@
 
 Code is based off of [this](https://github.com/epfml/attention-cnn) repository.
 
-A prelimenary model used to classify voice samples, using the latest findings in NLP. A figure of the model is shown below
+A prelimenary model used to classify voice samples, using the [latest findings](https://ai.googleblog.com/2020/01/reformer-efficient-transformer.html) in NLP. A figure of the model is shown below
 
 ![Model Architecture](../fig/COVIDetector.png)
 
@@ -11,6 +11,7 @@ To run the code on a Arch Linux machine for a CPU, use these commands in a new P
 
 ```
 pip install -r requirements.txt
+python3 train.py
 ```
 
 To run the code with a GPU, use these commands in a new Anaconda enviornment:
@@ -18,6 +19,7 @@ To run the code with a GPU, use these commands in a new Anaconda enviornment:
 ```
 conda install pytorch torchvision cudatoolkit=10.0 -c pytorch
 pip install -r requirements.txt
+python3 train.py
 ```
 
 ### Add your own model!
