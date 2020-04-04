@@ -4,6 +4,18 @@
     <p>
       This is a secure area
     </p>
+    <audio-recorder
+      upload-url="YOUR_API_URL"
+      :attempts="3"
+      :time="2"
+      :headers="headers"
+      :before-recording="callback"
+      :pause-recording="callback"
+      :after-recording="callback"
+      :select-record="callback"
+      :before-upload="callback"
+      :successful-upload="callback"
+      :failed-upload="callback"/>
   </div>
 </template>
 
@@ -17,12 +29,6 @@
 </script>
 
 <style>
-#secure {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+audio-recorder {
 }
 </style>
