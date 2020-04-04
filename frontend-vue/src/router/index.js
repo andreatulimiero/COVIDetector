@@ -4,6 +4,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import SignupComponent from "../views/signup.vue"
+import ConfirmComponent from "../views/confirm.vue"
 import SubmitComponent from "../views/submit.vue"
 import RetrieveComponent from "../views/retrieve.vue"
 
@@ -23,6 +24,11 @@ export default new VueRouter({
             path: "/signup",
             name: "signup",
             component: SignupComponent
+        },
+        {
+            path: "/confirm",
+            name: "confirm",
+            component: ConfirmComponent
         },
         {
             path: "/submit",
