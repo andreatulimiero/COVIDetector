@@ -1,4 +1,5 @@
 import os
+from django.conf import settings
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
@@ -6,12 +7,14 @@ from app.models import Sample
 from app.tasks import upload_sample, analyze_sample
 
 def send_registration_email(email: str, token: str):
-    link = token
+    if settings.DEBUG:
+        print('Not sending email in DEBUG mode, token:{}'.format(token))
+        return
     message = Mail(
             from_email='info@andreatulimiero.com',
             to_emails=email,
             subject='User registration confirmation',
-            html_content='Thanks for registering!<br/>Please finish your account setup by copying inserting this token {link}'.format(link=link))
+            html_content='Thanks for registering!<br/>Please finish your account setup by copying inserting this token {}'.format(token))
     try:
         sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)
