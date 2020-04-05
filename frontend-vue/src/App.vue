@@ -4,19 +4,19 @@
     <main class="container">
       <router-view/>
     </main>
-    <myfooter></myfooter>
+    <AppFooter></AppFooter>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import Navbar from '@/components/Navbar.vue'
-import MyFooter from '@/components/Footer.vue'
+import AppFooter from '@/components/AppFooter.vue'
 export default {
   name: 'App',
   components: {
     Navbar,
-    MyFooter
+    AppFooter
   },
   computed: {
     showNavbar() { return this.$store.getters.isLoggedIn },

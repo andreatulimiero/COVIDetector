@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'MyFooter'
+  name: 'AppFooter'
 }
 </script>
 
