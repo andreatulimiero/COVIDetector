@@ -1,5 +1,5 @@
 <template>
-  <div id="submit">
+  <div id="dashboard">
     <h1>Secure Area</h1>
     <p>
       This is a secure area
@@ -21,7 +21,7 @@
 
 <script>
   export default {
-    name: 'Submit',
+    name: 'Dashboard',
     data() {
       return {};
     }

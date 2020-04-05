@@ -1,4 +1,4 @@
-# frontend-vue
+# COVIDetector
 
 ## Project setup
 ```

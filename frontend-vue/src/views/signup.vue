@@ -5,33 +5,35 @@
       <h1>COVIDetector</h1>
       <p class="lead">Help the world's scientific community!</p> 
     </header>
-    <div class="card container">
-      <div class="card-body">
-        <h4>Help early disease detection by sharing anonymized voice samples!</h4>
-        <br/>
-        <form class="form">
-          <div class="form-row">
-            <div class="form-group col-md-8">
-              <input type="email"
-                     class="form-control"
-                     aria-describedby="emailHelp"
-                     placeholder="Enter email"
-                     v-model="email"> <small id="emailHelp" class="form-text text-muted"> Your email will be used only to check that you are a real person
-              </small>
+    <article class="row justify-content-center">
+      <div class="card col-10 col-md-8">
+        <div class="card-body">
+          <h4>Help early disease detection by sharing anonymized voice samples!</h4>
+          <br/>
+          <form class="form">
+            <div class="form-row">
+              <div class="form-group col-md-8">
+                <input type="email"
+                       class="form-control"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter email"
+                       v-model="email"> <small id="emailHelp" class="form-text text-muted"> Your email will be used only to check that you are a real person
+                </small>
+              </div>
+              <div class="form-group col-md-4">
+                <button type="submit" @click="signup" class="btn btn-primary mb-2">Signup</button>
+              </div>
             </div>
-            <div class="form-group col-md-4">
-              <button type="submit" @click="signup" class="btn btn-primary mb-2">Signup</button>
-            </div>
-          </div>
-        </form>
-        <p>Already have a confirmation token? Click <router-link to="confirm">here</router-link></p>
+          </form>
+          <p>Already have a confirmation token? Click <router-link to="confirm">here</router-link></p>
+        </div>
       </div>
-    </div>
+    </article>
   </div>
 </template>
 
 <script>
-  const axios = require('axios');
+  import api from '@/api.js'
   export default {
     name: "Signup",
     data() {
@@ -60,11 +62,7 @@
     },
     methods: {
       signup() {
-        //this.$emit("authenticated", true); ?
-        console.log('Registering ', this.email)
-        axios.post('http://localhost:8000/api/register/', {
-          email: this.email
-        }).then((res) => {
+        api.signupUser(this.email).then((res) => {
           console.log(res)
           this.$router.push({name: "confirm"});
         }).catch((err) => {
