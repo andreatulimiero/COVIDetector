@@ -10,7 +10,15 @@ export default new Vuex.Store({
     Auth: {
       token: "",
       secret: "",
-    }
+    },
+    PastRecordings: [
+      {
+        date: "April 2, 2020, 18:34",
+      },
+      {
+        date: "April 1, 2020, 09:34",
+      }
+    ]
   },
   getters: {
     isLoggedIn: (state) => state.Auth.token !== "" && state.Auth.secret !== "",
