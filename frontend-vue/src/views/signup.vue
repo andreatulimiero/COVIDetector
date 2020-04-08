@@ -28,7 +28,7 @@
           <p>Already have a confirmation token? Click <router-link to="confirm">here</router-link></p>
         </div>
       </div>
-      <div class="card col-10 col-md-8">
+      <div class="col-md-8">
         <div class="card-body">
           <h4>What does our service provide?</h4>
           <br/>
@@ -42,7 +42,7 @@
           <p>However, to make this project come to light, we need voice samples collected from the public. We encourage you to sign up and upload a voice sample, and then once we have enough, we can properly train the model to start detection.</p>
         </div>
       </div>
-      <div class="card col-10 col-md-8">
+      <div class="col-md-8">
         <div class="card-body">
           <h4>Medical Advice</h4>
           <p>We hope that this service can be of the most use to the public. We envision that our product will work well and will correctly detect diseases early. However, this service should only serve to inform the user on whether or not they will be contagious in the upcoming days, and should not be used as a replacement for a doctor.</p>
