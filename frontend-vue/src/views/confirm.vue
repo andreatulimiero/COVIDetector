@@ -43,6 +43,10 @@
       confirm() {
         this.$store.dispatch('confirmUser', {token: this.token})
       }
+    },
+    created() {
+      let token_query = this.$route.query.token 
+      if (token_query !== undefined) this.token = token_query
     }
   }
 </script>

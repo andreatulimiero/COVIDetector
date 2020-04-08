@@ -14,7 +14,7 @@ def send_registration_email(email: str, token: str):
             from_email='info@andreatulimiero.com',
             to_emails=email,
             subject='User registration confirmation',
-            html_content='Thanks for registering!<br/>Please finish your account setup by copying inserting this token {}'.format(token))
+            html_content='Thanks for registering!<br/>Please finish your account setup by going <a href="http://localhost:8080/#/confirm?token={}">here</a>'.format(token))
     try:
         sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
         response = sg.send(message)
