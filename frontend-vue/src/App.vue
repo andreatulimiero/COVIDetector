@@ -30,11 +30,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  min-height: 100%;
+  min-height: 100vh;
   position: relative;
-}
-.main {
-  margin-bottom: 60px;
-  min-height: 400px;
+  margin: 0;
+  padding-bottom: 60px;
 }
 </style>
