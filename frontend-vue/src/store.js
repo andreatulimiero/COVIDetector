@@ -12,14 +12,13 @@ export default new Vuex.Store({
       secret: "",
     },
     PastRecordings: [
-      {
-        date: "April 2, 2020, 18:34",
-        score: 20,
-      },
-      {
-        date: "April 1, 2020, 09:34",
-        score: 30,
-      }
+      { "date": "2020-04-07T10:29:10Z", "score": 33 },
+      { "date": "2020-03-28T00:18:04Z", "score": 10 },
+      { "date": "2020-03-26T18:07:41Z", "score": 28 },
+      { "date": "2020-03-23T23:10:35Z", "score": 39 },
+      { "date": "2020-03-19T20:34:07Z", "score": 38 },
+      { "date": "2020-03-15T21:40:10Z", "score": 21 },
+      { "date": "2020-03-13T20:41:26Z", "score": 15 }
     ]
   },
   getters: {
