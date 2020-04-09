@@ -1,6 +1,9 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">COVIDetector</a>
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <b>COVIDetector</b>
+    </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
