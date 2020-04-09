@@ -15,9 +15,11 @@
               <div class="form-group col-md-8">
                 <input type="text"
                        class="form-control"
-                       aria-describedby="emailHelp"
+                       aria-describedby="tokenHelp"
                        placeholder="Enter code"
-                       v-model="token"> <small id="emailHelp" class="form-text text-muted"> Your email will be used only to check that you are a real person
+                       v-model="token">
+                <small id="tokenHelp" class="form-text text-muted">
+                  This token confirms the email you specified is owned by you
                 </small>
               </div>
               <div class="form-group col-md-4">

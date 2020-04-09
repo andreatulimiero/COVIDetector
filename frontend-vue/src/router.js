@@ -6,7 +6,7 @@ import store from '@/store.js'
 
 import SignupComponent from "@/views/signup.vue"
 import ConfirmComponent from "@/views/confirm.vue"
-import DashboardComponent  from "@/views/dashboard.vue"
+import DashboardComponent  from "@/views/Dashboard.vue"
 
 Vue.use(AudioRecorder)
 Vue.use(FormSelectPlugin)

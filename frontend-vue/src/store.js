@@ -14,9 +14,11 @@ export default new Vuex.Store({
     PastRecordings: [
       {
         date: "April 2, 2020, 18:34",
+        score: 20,
       },
       {
         date: "April 1, 2020, 09:34",
+        score: 30,
       }
     ]
   },
