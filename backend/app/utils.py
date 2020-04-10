@@ -9,6 +9,7 @@ from app.tasks import upload_sample, analyze_sample
 def send_registration_email(email: str, token: str):
     if settings.DEBUG:
         print('Not sending email in DEBUG mode, token:{}'.format(token))
+        return
     message = Mail(
             from_email='info@andreatulimiero.com',
             to_emails=email,
