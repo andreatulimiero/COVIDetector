@@ -15,10 +15,10 @@ SAMPLE_SUBMISSION_RATE = timedelta(hours=0)
 class Registration(models.Model):
     email = models.EmailField(max_length=256, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    token = models.UUIDField( 
-            primary_key = True, 
-            default = uuid.uuid4, 
-            editable = False) 
+    token = models.UUIDField(
+            primary_key = True,
+            default = uuid.uuid4,
+            editable = False)
     confirmed = models.BooleanField(default=False)
 
 def gen_patient_token() -> str:
@@ -65,10 +65,10 @@ class Patient(models.Model):
         return self
 
 class Sample(models.Model):
-    id = models.UUIDField( 
-            primary_key = True, 
-            default = uuid.uuid4, 
-            editable = False) 
+    id = models.UUIDField(
+            primary_key = True,
+            default = uuid.uuid4,
+            editable = False)
     created_at = models.DateTimeField(auto_now_add=True)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='samples')
     uploaded = models.BooleanField(default=False)
