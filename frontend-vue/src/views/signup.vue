@@ -82,10 +82,10 @@
     methods: {
       signup() {
         api.signupUser(this.email).then((res) => {
-          console.log(res)
+          console.log(res);
           this.$router.push({name: "confirm"});
         }).catch((err) => {
-          console.log(err)
+          console.log(err);
         })
       }
     }

@@ -9,7 +9,7 @@
         <article id="record">
           <h2>New recording</h2>
           <div class="alert alert-success alert-dismissible shadow" role="alert">
-            <h4 class="alert-heading">Recording advices</h4>
+            <h4 class="alert-heading">Recording advice</h4>
             <ul>
               <li>Make sure you are in a quiet room when you start the recording.</li>
               <li>Listen to your submission to confirm that the sample was taken.</li>
@@ -27,6 +27,7 @@
               upload-url="YOUR_API_URL"
               :attempts="1"
               :time=".2"
+              :format="wav"
               :headers="headers"
               :before-recording="callback"
               :pause-recording="callback"
@@ -45,7 +46,7 @@
                 <option>Not Sure</option>
               </select>
             </div>
-            <button class="btn btn-primary shadow">Submit recording</button>
+            <button class="btn btn-primary shadow" @click="submit">Submit recording</button>
           </footer>
         </article>
       </div>
@@ -91,19 +92,36 @@
 
 <script>
 import moment from 'moment'
+import api from '@/api.js'
 export default {
   name: 'Dashboard',
   data() {
     return {
       selected: "",
+      base64Audio: "",
     }
   },
   methods: {
     getNiceDate(date) {
-      return moment(date).format('MMMM Do')
+      return moment(date).format('MMMM Do');
     },
     remove() {
       console.log("Deleted");
+    },
+    submit() {
+      if (this.selected === ""){
+        alert("You must state your condition before submitting a recording.");
+      }
+      else if (this.base64Audio === ""){
+        alert("You must create a recording.");
+      }
+      else{
+        api.submitRecording(this.patientID, this.base64Audio, this.selected).then((res) => {
+          console.log(res);
+        }).catch((err) => {
+          console.log(err);
+        });
+      }
     }
   }
 }
@@ -116,7 +134,7 @@ export default {
 #dashboard {
   #record{
     margin-bottom: 32px;
-    section, footer { 
+    section, footer {
       margin-top: 32px;
     }
     #recorder {
