@@ -14,7 +14,7 @@
     "bootstrap-vue": "^2.10.1",
     "core-js": "^3.6.4",
     "jquery": "^3.5.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "popper.js": "^1.16.1",
     "vue": "^2.6.11",
     "vue-audio-recorder": "^3.0.1",
